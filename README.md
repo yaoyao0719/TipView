@@ -6,5 +6,5 @@
 
 ###ScreenShots
 
-![image](https://github.com/yaoyao0719/TipView/blob/master/screenshots/1.png)
+![image](https://github.com/yaoyao0719/TipView/blob/master/screenshots/2.png)
 
