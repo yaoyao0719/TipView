@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         mButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(mContext,"点击按钮",Toast.LENGTH_SHORT).show();
             }
         });
     }
