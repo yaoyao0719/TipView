@@ -38,5 +38,5 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/text1"
-        android:text="aaa"/>
+        android:text="测试原来的自定义view"/>
 </RelativeLayout>

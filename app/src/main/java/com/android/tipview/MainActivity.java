@@ -17,56 +17,76 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTextView;
     private Context mContext;
     private Tooltip.TooltipView mTooltipView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mContext=this;
-        mButton=(Button)findViewById(R.id.button);
-        mButton1=(Button)findViewById(R.id.button11);
-        mTextView=(TextView)findViewById(R.id.text);
+        mContext = this;
+        mButton = (Button) findViewById(R.id.button);
+        mButton1 = (Button) findViewById(R.id.button11);
+        mTextView = (TextView) findViewById(R.id.text);
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                            mTooltipView= Tooltip.make(
-                                    mContext,
-                    new Tooltip.Builder()
-                            .anchor(mButton, Tooltip.Gravity.BOTTOM)
-                            .fitToScreen(true)
-                            .text("提示！！！")
-                            .withArrow(true)
-                            .closePolicy(new Tooltip.ClosePolicy().insidePolicy(false,false).outsidePolicy(false,false), 0)
-                            .maxWidth(getScreenWidth()/2)
-                            .setDismiss(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                    mTooltipView.remove();
-                                }
-                            })
-                            .withOverlay(false)
-                            .build()
-            );
-            mTooltipView.show();
+                mTooltipView = Tooltip.make(
+                        mContext,
+                        new Tooltip.Builder()
+                                .anchor(mButton, Tooltip.Gravity.BOTTOM)
+                                .fitToScreen(true)
+                                .text("提示！！！")
+                                .withArrow(true)
+                                .closePolicy(new Tooltip.ClosePolicy().insidePolicy(false, false).outsidePolicy(false, false), 0)
+                                .maxWidth(getScreenWidth() / 2)
+                                .setDismiss(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        mTooltipView.remove();
+                                    }
+                                })
+                                .withOverlay(false)
+                                .build()
+                );
+                mTooltipView.show();
             }
         });
 
         mTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext,"ssssss",Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "ssssss", Toast.LENGTH_SHORT).show();
             }
         });
 
         mButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext,"点击按钮",Toast.LENGTH_SHORT).show();
+                Tooltip.make(
+                        mContext,
+                        new Tooltip.Builder()
+                                .anchor(mButton1, Tooltip.Gravity.BOTTOM)
+                                .fitToScreen(true)
+                                .withCustomView(R.layout.custom_view)
+                                .text("使用withCustomView")
+                                .withArrow(true)
+                                .closePolicy(new Tooltip.ClosePolicy().insidePolicy(false, false).outsidePolicy(false, false), 0)
+                                .maxWidth(getScreenWidth() / 2)
+                                .setDismiss(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        mTooltipView.remove();
+                                    }
+                                })
+                                .withOverlay(false)
+                                .build()
+                ).show();
             }
         });
     }
-    public  int getScreenWidth(){
+
+    public int getScreenWidth() {
         return this.getResources().getDisplayMetrics().widthPixels;
     }
 }

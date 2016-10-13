@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="投资机构推荐的项目上线啦"
+            android:text=""
             android:textColor="#ffffff"
             android:textSize="15dp"
             android:maxLines="2"/>
