@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ff8800"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/lbText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="投资机构推荐的项目上线啦"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:maxLines="2"/>
+
+    <TextView
+        android:id="@+id/lbDismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbText"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:text="知道了"
+        android:textColor="#ccffffff"
+        android:textSize="13dp"
+        android:layout_marginTop="17dp"
+        android:padding="3dp"/>
+
+</LinearLayout>

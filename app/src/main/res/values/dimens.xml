@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="tooltip_width">200dp</dimen>
+    <dimen name="tooltip_padding">18dp</dimen>
+    <dimen name="menu_tooltip_padding">4dp</dimen>
+    <dimen name="tip_radius">2dp</dimen>
+
+    <dimen name="tip_dimen_regular">18dp</dimen>
+    <dimen name="tip_dimen_small">12dp</dimen>
+
+</resources>
